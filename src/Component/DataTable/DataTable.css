@@ -1,0 +1,33 @@
+.data_container {
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.searchBox {
+    width: 100%;
+    height: auto;
+    margin: 2rem 0;
+    text-align: right;
+}
+
+.data_container_list {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.data_container_list table{
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+.data_container_list table thead tr th{
+    border: 1px solid #000;
+}
+
+.data_container_list table tbody tr td{
+    border: 1px solid #000;
+}
