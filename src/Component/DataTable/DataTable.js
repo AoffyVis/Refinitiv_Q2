@@ -18,6 +18,13 @@ function DataTable() {
 
     fetchAPI();
   }, []);
+
+  const filterData = dataList.filter(value => {
+    if(search !== '') {
+      return value?.toString().toLowerCase().includes(search.toLowerCase());
+    }
+    return value;
+  })
   
   return (
     <>
@@ -37,20 +44,8 @@ function DataTable() {
                         <th>Categories</th>
                     </tr>
                 </thead>
-                <tbody>
-                  {/* {categories.map((category, index) =>
-                    <tr key={index}>
-                      <td key={index}>{category}</td>
-                    </tr>
-                  )} */}
-                  {dataList.filter((value) => {
-                    if(search === '') {
-                      return value;
-                    } else if ( value?.toString().toLowerCase().includes(search.toLowerCase()) ) {
-                      return value;
-                    }
-                  })
-                  .map((item, index) =>
+                <tbody>                  
+                  {filterData.map((item, index) =>
                     <tr key={index}>
                       <td>{item}</td>
                     </tr>
